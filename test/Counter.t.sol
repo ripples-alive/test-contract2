@@ -21,4 +21,13 @@ contract CounterTest is Test {
         counter.setNumber(x);
         assertEq(counter.number(), x);
     }
+
+    function testSum() public {
+        uint[] memory a = new uint[](3);
+        a[0] = 1;
+        a[1] = 3;
+        a[2] = 2;
+        uint s = counter.sum(a);
+        assertEq(s, 6);
+    }
 }
